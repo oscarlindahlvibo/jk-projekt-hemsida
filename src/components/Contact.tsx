@@ -9,7 +9,7 @@ const serviceOptions = [
   'Följebil',
   'Lastsäkringsintyg',
   'Tunga lyft',
-  'Balkar',
+  'Sjö- och flygtransport',
   'Konsulttjänster',
 ];
 

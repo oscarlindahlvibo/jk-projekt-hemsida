@@ -1,19 +1,42 @@
 import {
   Truck,
-  Package,
   FileText,
   ClipboardCheck,
   ShieldCheck,
-  Wrench,
   Map,
   Anchor,
+  Plane,
+  Siren,
+  type LucideProps,
 } from 'lucide-react';
+
+function CraneHookIcon({ className, ...props }: LucideProps) {
+  return (
+    <svg
+      aria-hidden="true"
+      className={className}
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      {...props}
+    >
+      <path d="M4 5h11l4 4" />
+      <path d="M7 5v14" />
+      <path d="M4 19h6" />
+      <path d="M15 5v7" />
+      <path d="M15 12a3 3 0 1 0 3 3" />
+    </svg>
+  );
+}
 
 const services = [
   {
     icon: Truck,
     title: 'Transport',
-    description: 'Förmedling av transporter och tunga lyft åt tillverkningsindustri och infrastrukturaktörer.',
+    description: 'Specialtransporter, expresstransporter och traditionella transporter i hela Europa.',
   },
   {
     icon: Map,
@@ -26,9 +49,9 @@ const services = [
     description: 'Hantering av tullklarering och dokumentation för gränsöverskridande transporter.',
   },
   {
-    icon: Package,
+    icon: Siren,
     title: 'Följebil',
-    description: 'Följebilar för säker transport av överseende och specialgods över hela Europa.',
+    description: 'Följebils- och VTL-tjänster för säkra transporter samt kontroll av färdväg inför transporterna.',
   },
   {
     icon: ShieldCheck,
@@ -36,14 +59,15 @@ const services = [
     description: 'Utfärdande av lastsäkringsintyg och kontroll av att lasten är säkrad enligt gällande regler.',
   },
   {
-    icon: Wrench,
+    icon: CraneHookIcon,
     title: 'Tunga lyft',
     description: 'Planering och genomförande av tunga lyft med specialiserad utrustning och erfaren personal.',
   },
   {
     icon: Anchor,
-    title: 'Balkar',
-    description: 'Transport och hantering av balkar och stålkonstruktioner för industri- och infrastrukturprojekt.',
+    secondaryIcon: Plane,
+    title: 'Sjö- och flygtransport',
+    description: 'Organiserar och samordnar sjö- och flygtransporter.',
   },
   {
     icon: ClipboardCheck,
@@ -77,6 +101,9 @@ export default function Services() {
             >
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600 transition-colors group-hover:bg-brand-500 group-hover:text-white">
                 <service.icon className="h-6 w-6" />
+                {'secondaryIcon' in service && service.secondaryIcon ? (
+                  <service.secondaryIcon className="-ml-1 h-5 w-5" />
+                ) : null}
               </div>
               <h3 className="font-display text-lg font-bold text-navy-950">
                 {service.title}

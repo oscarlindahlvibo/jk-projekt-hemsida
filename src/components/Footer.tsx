@@ -69,7 +69,8 @@ export default function Footer() {
               <li><a href="#tjanster" className="hover:text-white transition-colors">Tulltjänster</a></li>
               <li><a href="#tjanster" className="hover:text-white transition-colors">Följebil</a></li>
               <li><a href="#tjanster" className="hover:text-white transition-colors">Lastsäkringsintyg</a></li>
-              <li><a href="#tjanster" className="hover:text-white transition-colors">Tunga lyft & balkar</a></li>
+              <li><a href="#tjanster" className="hover:text-white transition-colors">Tunga lyft</a></li>
+              <li><a href="#tjanster" className="hover:text-white transition-colors">Sjö- och flygtransport</a></li>
             </ul>
           </div>
         </div>
