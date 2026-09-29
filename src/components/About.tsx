@@ -19,12 +19,12 @@ const values = [
 ];
 
 const points = [
-  'Förmedling av transporter',
+  'Specialtransporter, Expresstransporter och traditionella godstransporter',
   'Tunga lyft',
   'Konsulttjänster åt tillverkningsindustri',
-  'Aktörer inom infrastruktur',
+  'Planering och simuleringstjänster för specialtransporter',
   'Specialtransporter i hela Europa',
-  'Lastsäkring och intyg',
+  'Följebil och VTL-tjänster',
 ];
 
 export default function About() {
