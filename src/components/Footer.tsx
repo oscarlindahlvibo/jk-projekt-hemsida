@@ -1,4 +1,4 @@
-import { Truck, Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowUpRight } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -7,9 +7,11 @@ export default function Footer() {
         <div className="grid gap-8 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-brand-500 to-brand-600">
-                <Truck className="h-6 w-6 text-white" />
-              </div>
+              <img
+                src="/jk-logo-full.jpg"
+                alt="JK Projektlogistik AB"
+                className="h-11 w-11 rounded-lg bg-white object-contain p-1"
+              />
               <div>
                 <p className="font-display text-lg font-bold text-white">
                   JK Projektlogistik AB
@@ -22,6 +24,15 @@ export default function Footer() {
               Vi verkar över hela Europa och säkerställer att era specialtransporter
               och projekt rullar på.
             </p>
+            <a
+              href="https://projekt.jkprojekt.se"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-gradient-to-br from-brand-500 to-brand-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-500/30 transition-transform hover:scale-[1.02]"
+            >
+              Boka frakt (registrerade partners)
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
           </div>
 
           <div>

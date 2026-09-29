@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Menu, X, Truck } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { href: '#tjanster', label: 'Tjänster' },
@@ -28,9 +28,11 @@ export default function Navbar() {
     >
       <nav className="container-x flex h-20 items-center justify-between">
         <a href="#hem" className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-brand-500 to-brand-600 shadow-lg shadow-brand-500/30">
-            <Truck className="h-6 w-6 text-white" />
-          </div>
+          <img
+            src="/jk-logo-full.jpg"
+            alt="JK Projektlogistik AB"
+            className="h-14 w-14 rounded-lg bg-white object-contain p-1 shadow-lg shadow-brand-500/30"
+          />
           <div className="flex flex-col leading-tight">
             <span className={`font-display text-lg font-bold ${scrolled ? 'text-navy-950' : 'text-white'}`}>
               JK Projektlogistik
@@ -55,6 +57,18 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <a
+            href="https://projekt.jkprojekt.se"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`text-sm font-medium transition-colors ${
+              scrolled
+                ? 'text-navy-700 hover:text-brand-600'
+                : 'text-white/90 hover:text-white'
+            }`}
+          >
+            Boka frakt
+          </a>
           <a href="#kontakt" className="btn-primary">
             Få offert
           </a>
@@ -82,6 +96,15 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
+            <a
+              href="https://projekt.jkprojekt.se"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMenuOpen(false)}
+              className="rounded-lg px-4 py-3 text-sm font-medium text-navy-700 hover:bg-brand-50 hover:text-brand-600"
+            >
+              Boka frakt
+            </a>
             <a
               href="#kontakt"
               onClick={() => setMenuOpen(false)}
