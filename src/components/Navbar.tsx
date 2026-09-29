@@ -61,13 +61,9 @@ export default function Navbar() {
             href="https://projekt.jkprojekt.se"
             target="_blank"
             rel="noopener noreferrer"
-            className={`text-sm font-medium transition-colors ${
-              scrolled
-                ? 'text-navy-700 hover:text-brand-600'
-                : 'text-white/90 hover:text-white'
-            }`}
+            className="btn-primary"
           >
-            Boka frakt
+            Kundportal
           </a>
           <a href="#kontakt" className="btn-primary">
             Få offert
@@ -101,14 +97,14 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMenuOpen(false)}
-              className="rounded-lg px-4 py-3 text-sm font-medium text-navy-700 hover:bg-brand-50 hover:text-brand-600"
+              className="btn-primary mt-2"
             >
-              Boka frakt
+              Kundportal
             </a>
             <a
               href="#kontakt"
               onClick={() => setMenuOpen(false)}
-              className="btn-primary mt-2"
+              className="btn-primary"
             >
               Få offert
             </a>

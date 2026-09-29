@@ -30,7 +30,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-lg bg-gradient-to-br from-brand-500 to-brand-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-500/30 transition-transform hover:scale-[1.02]"
             >
-              Boka frakt (registrerade partners)
+              Kundportal
               <ArrowUpRight className="h-4 w-4" />
             </a>
           </div>
