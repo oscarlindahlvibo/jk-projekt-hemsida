@@ -48,8 +48,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-brand-400" />
-                <a href="mailto:info@jkprojektlogistik.se" className="hover:text-white transition-colors">
-                  info@jkprojektlogistik.se
+                <a href="mailto:info@jkprojekt.se" className="hover:text-white transition-colors">
+                  info@jkprojekt.se
                 </a>
               </li>
               <li className="flex items-center gap-3">

@@ -77,13 +77,13 @@ export default function Contact() {
                 </div>
               </a>
 
-              <a href="mailto:info@jkprojektlogistik.se" className="flex items-center gap-4 group">
+              <a href="mailto:info@jkprojekt.se" className="flex items-center gap-4 group">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600 transition-colors group-hover:bg-brand-500 group-hover:text-white">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
                   <p className="text-sm text-navy-500">E-post</p>
-                  <p className="font-semibold text-navy-950">info@jkprojektlogistik.se</p>
+                  <p className="font-semibold text-navy-950">info@jkprojekt.se</p>
                 </div>
               </a>
 
