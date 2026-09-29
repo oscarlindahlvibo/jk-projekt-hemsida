@@ -25,12 +25,16 @@ export default function Contact() {
     setErrorMsg('');
 
     const formData = new FormData(e.currentTarget);
+    if (formData.get('website')) {
+      setStatus('success');
+      return;
+    }
     const data = {
-      name: formData.get('name') as string,
-      email: formData.get('email') as string,
-      phone: (formData.get('phone') as string) || null,
-      company: (formData.get('company') as string) || null,
-      message: formData.get('message') as string,
+      name: String(formData.get('name') ?? '').trim(),
+      email: String(formData.get('email') ?? '').trim(),
+      phone: String(formData.get('phone') ?? '').trim() || null,
+      company: String(formData.get('company') ?? '').trim() || null,
+      message: String(formData.get('message') ?? '').trim(),
       service_type: (formData.get('service_type') as string) || null,
     };
 
@@ -121,6 +125,10 @@ export default function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="hidden" aria-hidden="true">
+                  <label htmlFor="website">Webbplats</label>
+                  <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+                </div>
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-navy-700">
@@ -131,6 +139,7 @@ export default function Contact() {
                       id="name"
                       name="name"
                       required
+                      maxLength={120}
                       className="mt-1 w-full rounded-lg border border-navy-200 px-4 py-2.5 text-sm text-navy-950 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all"
                       placeholder="Ditt namn"
                     />
@@ -144,6 +153,7 @@ export default function Contact() {
                       id="email"
                       name="email"
                       required
+                      maxLength={320}
                       className="mt-1 w-full rounded-lg border border-navy-200 px-4 py-2.5 text-sm text-navy-950 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all"
                       placeholder="namn@foretag.se"
                     />
@@ -157,6 +167,7 @@ export default function Contact() {
                     </label>
                     <input
                       type="tel"
+                      maxLength={50}
                       id="phone"
                       name="phone"
                       className="mt-1 w-full rounded-lg border border-navy-200 px-4 py-2.5 text-sm text-navy-950 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all"
@@ -169,6 +180,7 @@ export default function Contact() {
                     </label>
                     <input
                       type="text"
+                      maxLength={200}
                       id="company"
                       name="company"
                       className="mt-1 w-full rounded-lg border border-navy-200 px-4 py-2.5 text-sm text-navy-950 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all"
@@ -201,6 +213,7 @@ export default function Contact() {
                     id="message"
                     name="message"
                     required
+                    maxLength={5000}
                     rows={4}
                     className="mt-1 w-full rounded-lg border border-navy-200 px-4 py-2.5 text-sm text-navy-950 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all resize-none"
                     placeholder="Beskriv ert transport- eller projektbehov..."

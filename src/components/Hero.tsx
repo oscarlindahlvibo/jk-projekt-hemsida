@@ -2,7 +2,7 @@ import { ArrowRight, MapPin, ShieldCheck, Globe } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section id="hem" className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="hem" className="relative min-h-[92svh] flex items-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
           src="/jk-hero.webp"
