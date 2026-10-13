@@ -5,8 +5,8 @@ export default function Hero() {
     <section id="hem" className="relative min-h-[92svh] flex items-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="/jk-hero-v2.webp"
-          alt="JK Projektlogistik utför specialtransport med svensk varningsbil"
+          src="/jk-hero-vtl.webp"
+          alt="JK Projektlogistik utför specialtransport med gul vägtransportledarbil"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950/90 via-navy-950/75 to-navy-950/40" />

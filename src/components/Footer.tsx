@@ -48,13 +48,13 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-brand-400" />
-                <a href="mailto:info@jkprojekt.se" className="hover:text-white transition-colors">
-                  info@jkprojekt.se
+                <a href="mailto:jesper@jkprojekt.se" className="hover:text-white transition-colors">
+                  jesper@jkprojekt.se
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <MapPin className="h-4 w-4 text-brand-400" />
-                <span>Brinkagatan 5, 364 30 Åseda</span>
+                <span>Terminalgatan 4, Åseda</span>
               </li>
             </ul>
           </div>

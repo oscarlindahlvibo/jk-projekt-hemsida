@@ -1,4 +1,5 @@
 import { CheckCircle2, Target, Eye, Users } from 'lucide-react';
+import Team from './Team';
 
 const values = [
   {
@@ -29,7 +30,7 @@ const points = [
 
 export default function About() {
   return (
-    <section id="om-oss" className="py-24 bg-navy-50">
+    <section id="om-oss" className="py-24 bg-navy-50 scroll-mt-20">
       <div className="container-x">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="relative">
@@ -83,6 +84,7 @@ export default function About() {
             </div>
           </div>
         </div>
+        <Team />
       </div>
     </section>
   );
