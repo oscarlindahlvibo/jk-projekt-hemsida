@@ -6,6 +6,7 @@ const navLinks = [
   { href: '#om-oss', label: 'Om oss' },
   { href: '#projekt', label: 'Projekt' },
   { href: '#kontakt', label: 'Kontakt' },
+  { href: '#historia', label: 'Historia' },
 ];
 
 export default function Navbar() {

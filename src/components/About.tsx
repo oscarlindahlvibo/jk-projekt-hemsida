@@ -37,7 +37,7 @@ export default function About() {
             <div className="overflow-hidden rounded-2xl shadow-2xl">
               <img
                 src="/jk-about.jpg"
-                alt="Montage av transformatorstation med skylift och tunga lyftdon"
+                alt="Lyft av transformatorstation vid solcellspark"
                 className="h-full w-full object-cover"
               />
             </div>
